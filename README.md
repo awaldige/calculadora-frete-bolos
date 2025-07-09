@@ -78,7 +78,7 @@ A calculadora está disponível publicamente para teste:
 
 Acesse a Calculadora de Frete Online Aqui
 
-awaldige/calculadora-frete-bolos
+[awaldige/calculadora-frete-bolos](https://calculadora-frete-bolos.vercel.app/)
 
 
 
