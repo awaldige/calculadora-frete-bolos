@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Frete para Bolos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Frete</h1>
+        <p>Calcule o valor do frete para o seu pedido de bolos caseiros.</p>
+
+        <div class="input-group">
+            <label for="distanciaKm">Distância (em km):</label>
+            <input type="number" id="distanciaKm" min="0" value="5" step="0.1">
+        </div>
+
+        <div class="input-group">
+            <label for="pesoKg">Peso do Pedido (em kg):</label>
+            <input type="number" id="pesoKg" min="0.1" value="1.0" step="0.1">
+        </div>
+
+        <button id="calcularFreteBtn">Calcular Frete</button>
+
+        <div class="resultado">
+            <h2>Valor do Frete:</h2>
+            <p><span id="valorFrete">R$ 0,00</span></p>
+            <p id="prazoEstimado"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

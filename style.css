@@ -1,0 +1,157 @@
+/* Importação de uma fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 15px; /* Padding geral menor */
+    background-color: #FDF7E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: white;
+    padding: 25px; /* Padding interno diminuído */
+    border-radius: 10px; /* Bordas levemente menores */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Sombra um pouco mais suave */
+    max-width: 400px; /* Largura máxima diminuída */
+    width: 100%;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+h1 {
+    color: #A0522D;
+    margin-bottom: 8px; /* Margem diminuída */
+    font-size: 1.8em; /* Fonte do título menor */
+    font-weight: 700;
+}
+
+p {
+    color: #6C5E53;
+    margin-bottom: 20px; /* Margem diminuída */
+    line-height: 1.5; /* Altura da linha um pouco menor */
+    font-size: 0.95em; /* Fonte do parágrafo um pouco menor */
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 18px; /* Espaço entre os grupos de input diminuído */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px; /* Espaço entre label e input diminuído */
+    font-weight: 500;
+    color: #5A4E44;
+    font-size: 0.95em; /* Fonte da label menor */
+}
+
+.input-group input[type="number"] {
+    width: calc(100% - 20px); /* Ajusta para novo padding */
+    padding: 10px; /* Padding dos inputs diminuído */
+    border: 1px solid #CCC;
+    border-radius: 5px; /* Bordas dos inputs levemente menores */
+    font-size: 0.95rem; /* Fonte do input menor */
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #FF8C00;
+    box-shadow: 0 0 6px rgba(255, 140, 0, 0.15); /* Sombra no foco mais suave */
+}
+
+button {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 25px; /* Padding do botão diminuído */
+    border-radius: 6px; /* Bordas do botão levemente menores */
+    font-size: 1em; /* Fonte do botão menor */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 18px; /* Margem superior do botão diminuída */
+    letter-spacing: 0.4px; /* Espaçamento de letras levemente menor */
+}
+
+button:hover {
+    background-color: #FF6F00;
+    transform: translateY(-1px); /* Efeito de levantar mais sutil */
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.resultado {
+    margin-top: 25px; /* Espaço antes do resultado diminuído */
+    padding-top: 18px; /* Padding interno diminuído */
+    border-top: 1px dashed #DDD;
+    text-align: center;
+}
+
+.resultado h2 {
+    color: #A0522D;
+    margin-bottom: 10px; /* Margem diminuída */
+    font-size: 1.4em; /* Fonte do título do resultado menor */
+    font-weight: 700;
+}
+
+.resultado p {
+    font-size: 1.1em; /* Tamanho do texto do resultado menor */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+#valorFrete {
+    color: #28a745;
+    font-size: 1.9em; /* Destaque do valor final um pouco menor */
+    font-weight: 700;
+    display: block;
+    margin-top: 4px;
+}
+
+#prazoEstimado {
+    font-size: 0.85em; /* Fonte do prazo um pouco menor */
+    color: #777;
+    margin-top: 12px; /* Margem superior do prazo diminuída */
+    font-style: italic;
+}
+
+/* Responsividade Aprimorada */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Padding menor em telas muito pequenas */
+    }
+
+    .container {
+        padding: 20px; /* Padding menor no container em telas pequenas */
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 1.6em; /* Ajuste para telas pequenas */
+    }
+
+    button {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+
+    .resultado h2 {
+        font-size: 1.2em;
+    }
+
+    #valorFrete {
+        font-size: 1.6em;
+    }
+}
