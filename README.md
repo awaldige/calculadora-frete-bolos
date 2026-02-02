@@ -59,10 +59,13 @@ A aplicação pode ser acessada online:
 
 🔗 https://calculadora-frete-bolos.vercel.app
 
-🖼️ Demonstração
-[IMG_1298](https://github.com/user-attachments/assets/aa0bd7d8-6399-49da-b33d-f241c055adbd)
-[IMG_1299](https://github.com/user-attachments/assets/493926a2-fd5e-4440-8afa-2a0462d1e5bd)
+## 📸 Demonstração
 
+### Tela inicial
+![Tela inicial](imagens/home.png)
+
+### Resultado do cálculo
+![Resultado](imagens/resultado.png)
 
 
 📂 Estrutura do Projeto
