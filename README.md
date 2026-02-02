@@ -1,110 +1,106 @@
-🍰 Calculadora de Frete para Bolos Delícia
+# 🍰 Calculadora de Frete — Bolos Delícia
 
-💡 Sobre o Projeto
+Aplicação web simples e eficiente para **cálculo automático de frete** em entregas de bolos e confeitaria artesanal.  
+O sistema calcula o valor da entrega considerando **distância** e **peso do pedido**, oferecendo uma estimativa rápida e clara para clientes e lojistas.
 
-Este projeto é uma ferramenta web simples e intuitiva desenvolvida para lojas de bolos caseiros. Ele automatiza o cálculo do frete de entregas, considerando a distância (em quilômetros) e o peso do pedido (em quilogramas). O objetivo é simplificar o processo de estimativa de custos de entrega, oferecendo uma solução rápida, precisa e responsiva que beneficia tanto a loja quanto seus clientes.
+Projeto desenvolvido para fins de **portfólio e uso prático em pequenos negócios**.
 
+---
 
+## 💡 Sobre o Projeto
 
-✨ Funcionalidades
+A calculadora foi criada para facilitar o processo de definição de custo de entrega em confeitarias e lojas caseiras, evitando cálculos manuais e erros de estimativa.
 
-Cálculo de Frete Baseado em Variáveis: Calcula o valor do frete com base em uma taxa fixa, custo por KM e custo por KG.
+O sistema combina:
 
+- Taxa fixa de entrega
+- Custo por quilômetro rodado
+- Custo por peso transportado
 
+Tudo apresentado em uma interface simples e responsiva.
 
-Entrada de Dados Simplificada: Campos de entrada numéricos para distância e peso do pedido.
+---
 
+## ✨ Funcionalidades
 
+- 📏 Cálculo automático baseado em:
+  - Distância (KM)
+  - Peso do pedido (KG)
+- 💰 Exibição instantânea do valor do frete
+- ⏱️ Estimativa de prazo de entrega
+- ✅ Validação de dados para evitar valores inválidos
+- 📱 Layout responsivo (desktop e mobile)
+- ⚡ Funcionamento rápido e sem backend
 
-Validação de Entrada: Garante que apenas valores válidos (números positivos) sejam utilizados nos cálculos.
+---
 
+## 🛠 Tecnologias Utilizadas
 
+- **HTML5** — Estrutura da aplicação
+- **CSS3** — Layout responsivo e estilo visual
+- **JavaScript (Vanilla)** — Lógica de cálculo e interações
 
-Exibição Instantânea do Resultado: Mostra o valor total do frete e um prazo de entrega estimado após o clique no botão.
+---
 
+## 🚀 Como Executar Localmente
 
-
-Design Responsivo: A interface se adapta e funciona perfeitamente em diferentes tamanhos de tela (desktops, tablets e celulares).
-
-
-
-💻 Tecnologias Utilizadas
-
-HTML5: Estrutura e semântica do conteúdo da calculadora.
-
-
-
-CSS3: Estilização, layout responsivo e aprimoramentos visuais para uma experiência agradável.
-
-
-
-JavaScript (Vanilla JS): Responsável pela lógica de cálculo do frete, validação de entradas e atualização dinâmica dos resultados na interface.
-
-
-
-⚙️ Como Usar/Executar Localmente
-
-Siga estas instruções simples para ter a calculadora funcionando em seu computador:
-
-
-
-Clone o Repositório:
-
-Abra seu terminal ou prompt de comando e execute:
-
-
-
-Bash
-
-
-
+### 1. Clonar o repositório
+```bash
 git clone https://github.com/awaldige/calculadora-frete-bolos.git
-
 cd calculadora-frete-bolos
+2. Abrir o projeto
+Abra o arquivo abaixo em qualquer navegador:
+
+index.html
+Nenhum servidor ou instalação adicional é necessária.
+
+🌐 Versão Online
+A aplicação pode ser acessada online:
+
+🔗 https://calculadora-frete-bolos.vercel.app
+
+🖼️ Demonstração
+[IMG_1298](https://github.com/user-attachments/assets/aa0bd7d8-6399-49da-b33d-f241c055adbd)
+[IMG_1299](https://github.com/user-attachments/assets/493926a2-fd5e-4440-8afa-2a0462d1e5bd)
 
 
 
-Abra o index.html:
+📂 Estrutura do Projeto
+calculadora-frete-bolos/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+🔮 Melhorias Futuras
+Possíveis evoluções do projeto:
 
-Este projeto é um site estático e não requer um servidor web. Basta abrir o arquivo index.html diretamente no seu navegador de preferência (Google Chrome, Mozilla Firefox, Microsoft Edge, etc.).
+Integração com APIs de mapas para cálculo automático de distância
 
+Cadastro de pedidos e clientes
 
+Histórico de entregas
 
-🌐 Acesse o Projeto Online
+Área administrativa
 
-A calculadora está disponível publicamente para teste:
+Versão PWA com uso offline
 
-
-
-Acesse a Calculadora de Frete Online Aqui
-
-[awaldige/calculadora-frete-bolos](https://calculadora-frete-bolos.vercel.app/)
-
-
-
-
-
-
+Integração com sistemas de pagamento
 
 🤝 Contribuições
+Sugestões e melhorias são bem-vindas:
 
-Sugestões de melhorias, novas funcionalidades ou relatórios de bugs são muito bem-vindos! Sinta-se à vontade para:
+Abra uma Issue
 
+Envie um Pull Request
 
-
-Abrir uma Issue para discutir ideias ou relatar problemas.
-
-
-
-Enviar um Pull Request com suas contribuições de código.
-
-
+Compartilhe ideias para evolução do projeto
 
 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
-
-
+Este projeto utiliza a Licença MIT, permitindo uso e adaptação livre.
 
 👨‍💻 Autor
-Andre Waldige(https://github.com/awaldige)
+Desenvolvido por André Waldige
+🔗 GitHub: https://github.com/awaldige
+
+⭐ Projeto criado para estudo, prática e portfólio profissional.
