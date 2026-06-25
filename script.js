@@ -1,4 +1,4 @@
-```javascript
+
 function calcularFrete() {
 
     const nome = document.getElementById("nome").value.trim();
@@ -145,4 +145,4 @@ function calcularFrete() {
 
     whatsappBtn.style.display = "block";
 }
-```
+
