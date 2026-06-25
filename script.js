@@ -1,5 +1,4 @@
 
-import { supabase } from "./supabase.js";
 
 async function salvarPedido(dados) {
 
