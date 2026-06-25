@@ -1,4 +1,4 @@
-javascript
+
 function calcularFrete() {
 
     const nome = document.getElementById("nome").value.trim();
