@@ -1,62 +1,93 @@
+```javascript
 function calcularFrete() {
 
-    const nome = document.getElementById("nome").value;
-    const telefone = document.getElementById("telefone").value;
+    const nome = document.getElementById("nome").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
 
-    const selectBolo =
-        document.getElementById("bolo");
+    if (!nome) {
+        alert("Informe o nome do cliente.");
+        return;
+    }
+
+    const selectBolo = document.getElementById("bolo");
 
     const bolo =
         selectBolo.options[
             selectBolo.selectedIndex
         ].value;
 
-    const precoBolo =
-        Number(
-            selectBolo.options[
-                selectBolo.selectedIndex
-            ].dataset.preco
-        );
+    const precoBolo = Number(
+        selectBolo.options[
+            selectBolo.selectedIndex
+        ].dataset.preco
+    );
 
-    const peso =
-        Number(document.getElementById("peso").value);
+    const peso = Number(
+        document.getElementById("peso").value
+    );
 
-    const distancia =
-        Number(document.getElementById("distancia").value);
+    const distancia = Number(
+        document.getElementById("distancia").value
+    );
 
-    let frete = 8 + (distancia * 1.5);
+    // Configuração do frete
+    const taxaBase = 8;
+    const valorPorKm = 1.5;
+    const adicionalPeso = 2;
+
+    let frete = taxaBase + (distancia * valorPorKm);
 
     if (peso > 2) {
-        frete += (peso - 2) * 2;
+        frete += (peso - 2) * adicionalPeso;
+    }
+
+    let prazo = "";
+
+    if (distancia <= 5) {
+        prazo = "30 minutos";
+    } else if (distancia <= 15) {
+        prazo = "1 hora";
+    } else {
+        prazo = "2 horas";
     }
 
     const total = precoBolo + frete;
 
     document.getElementById("resultado").innerHTML = `
-    
-    <div class="resultado-card">
+        <div class="resultado-card">
 
-        <h2>Resumo do Pedido</h2>
+            <h2>Resumo do Pedido</h2>
 
-        <p><strong>Cliente:</strong> ${nome}</p>
+            <p><strong>Cliente:</strong> ${nome}</p>
 
-        <p><strong>Telefone:</strong> ${telefone}</p>
+            <p><strong>Telefone:</strong> ${telefone}</p>
 
-        <p><strong>Bolo:</strong> ${bolo}</p>
+            <p><strong>Bolo:</strong> ${bolo}</p>
 
-        <p><strong>Valor do Bolo:</strong>
-           R$ ${precoBolo.toFixed(2)}
-        </p>
+            <p><strong>Peso:</strong> ${peso} kg</p>
 
-        <p><strong>Frete:</strong>
-           R$ ${frete.toFixed(2)}
-        </p>
+            <p><strong>Distância:</strong> ${distancia} km</p>
 
-        <p><strong>Total:</strong>
-           R$ ${total.toFixed(2)}
-        </p>
+            <p><strong>Valor do Bolo:</strong>
+               R$ ${precoBolo.toFixed(2)}
+            </p>
 
-    </div>
+            <p><strong>Frete:</strong>
+               R$ ${frete.toFixed(2)}
+            </p>
+
+            <p><strong>Prazo:</strong>
+               ${prazo}
+            </p>
+
+            <hr style="margin:15px 0;">
+
+            <p style="font-size:20px;">
+                <strong>Total:</strong>
+                R$ ${total.toFixed(2)}
+            </p>
+
+        </div>
     `;
 
     const numeroWhatsapp = "5511985878638";
@@ -66,37 +97,29 @@ Olá!
 
 Gostaria de fazer um pedido.
 
-Cliente: ${nome}
+👤 Cliente: ${nome}
 
-Telefone: ${telefone}
+📞 Telefone: ${telefone}
 
-Bolo: ${bolo}
+🎂 Bolo: ${bolo}
 
-Valor do Bolo: R$ ${precoBolo.toFixed(2)}
+⚖️ Peso: ${peso} kg
 
-Frete: R$ ${frete.toFixed(2)}
+📍 Distância: ${distancia} km
 
-Total: R$ ${total.toFixed(2)}
+🚚 Frete: R$ ${frete.toFixed(2)}
+
+💰 Total: R$ ${total.toFixed(2)}
+
+⏱️ Prazo estimado: ${prazo}
 `;
 
-    document.getElementById("whatsappBtn").href =
+    const whatsappBtn =
+        document.getElementById("whatsappBtn");
+
+    whatsappBtn.href =
         `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
 
-    document.getElementById("whatsappBtn").style.display =
-        "block";
+    whatsappBtn.style.display = "block";
 }
-
-    document.getElementById("resultado").innerHTML = `
-        <hr><br>
-
-        <h2>Resumo do Pedido</h2>
-
-        <p><strong>Cliente:</strong> ${nome}</p>
-
-        <p><strong>Bolo:</strong> ${bolo}</p>
-
-        <p><strong>Frete:</strong> R$ ${frete.toFixed(2)}</p>
-
-        <p><strong>Total:</strong> R$ ${total.toFixed(2)}</p>
-    `;
-}
+```
