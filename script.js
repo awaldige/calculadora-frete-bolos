@@ -1,4 +1,4 @@
-
+```javascript
 function calcularFrete() {
 
     const nome = document.getElementById("nome").value.trim();
@@ -6,6 +6,11 @@ function calcularFrete() {
 
     if (!nome) {
         alert("Informe o nome do cliente.");
+        return;
+    }
+
+    if (!telefone) {
+        alert("Informe o telefone.");
         return;
     }
 
@@ -22,15 +27,22 @@ function calcularFrete() {
         ].dataset.preco
     );
 
-    const peso = Number(
-        document.getElementById("peso").value
-    );
+    const peso =
+        Number(document.getElementById("peso").value);
 
-    const distancia = Number(
-        document.getElementById("distancia").value
-    );
+    const distancia =
+        Number(document.getElementById("distancia").value);
 
-    // Configuração do frete
+    if (peso <= 0) {
+        alert("Peso inválido.");
+        return;
+    }
+
+    if (distancia < 0) {
+        alert("Distância inválida.");
+        return;
+    }
+
     const taxaBase = 8;
     const valorPorKm = 1.5;
     const adicionalPeso = 2;
@@ -53,10 +65,19 @@ function calcularFrete() {
 
     const total = precoBolo + frete;
 
+    const moeda = valor =>
+        valor.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        });
+
+    const dataPedido =
+        new Date().toLocaleString("pt-BR");
+
     document.getElementById("resultado").innerHTML = `
         <div class="resultado-card">
 
-            <h2>Resumo do Pedido</h2>
+            <h2>📋 Resumo do Pedido</h2>
 
             <p><strong>Cliente:</strong> ${nome}</p>
 
@@ -69,22 +90,22 @@ function calcularFrete() {
             <p><strong>Distância:</strong> ${distancia} km</p>
 
             <p><strong>Valor do Bolo:</strong>
-               R$ ${precoBolo.toFixed(2)}
+               ${moeda(precoBolo)}
             </p>
 
             <p><strong>Frete:</strong>
-               R$ ${frete.toFixed(2)}
+               ${moeda(frete)}
             </p>
 
             <p><strong>Prazo:</strong>
                ${prazo}
             </p>
 
-            <hr style="margin:15px 0;">
+            <hr>
 
-            <p style="font-size:20px;">
+            <p style="font-size:22px;">
                 <strong>Total:</strong>
-                R$ ${total.toFixed(2)}
+                ${moeda(total)}
             </p>
 
         </div>
@@ -93,9 +114,7 @@ function calcularFrete() {
     const numeroWhatsapp = "5511985878638";
 
     const mensagem = `
-Olá!
-
-Gostaria de fazer um pedido.
+🎂 *NOVO PEDIDO*
 
 👤 Cliente: ${nome}
 
@@ -107,11 +126,15 @@ Gostaria de fazer um pedido.
 
 📍 Distância: ${distancia} km
 
-🚚 Frete: R$ ${frete.toFixed(2)}
+💵 Valor do bolo: ${moeda(precoBolo)}
 
-💰 Total: R$ ${total.toFixed(2)}
+🚚 Frete: ${moeda(frete)}
 
-⏱️ Prazo estimado: ${prazo}
+💰 Total: ${moeda(total)}
+
+⏱️ Prazo: ${prazo}
+
+📅 Data: ${dataPedido}
 `;
 
     const whatsappBtn =
@@ -122,4 +145,4 @@ Gostaria de fazer um pedido.
 
     whatsappBtn.style.display = "block";
 }
-
+```
