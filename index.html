@@ -44,13 +44,23 @@
       <div class="input-group">
         <label>Tipo de Bolo</label>
 
-        <select id="bolo">
-          <option value="Chocolate">Chocolate</option>
-          <option value="Morango">Morango</option>
-          <option value="Prestígio">Prestígio</option>
-          <option value="Ninho">Ninho</option>
-        </select>
-      </div>
+     <select id="bolo">
+    <option value="Chocolate" data-preco="50">
+        Chocolate - R$ 50,00
+    </option>
+
+    <option value="Morango" data-preco="60">
+        Morango - R$ 60,00
+    </option>
+
+    <option value="Prestigio" data-preco="70">
+        Prestígio - R$ 70,00
+    </option>
+
+    <option value="Ninho" data-preco="80">
+        Ninho - R$ 80,00
+    </option>
+</select>
 
       <div class="input-group">
         <label>Peso (kg)</label>
@@ -67,11 +77,18 @@
         Calcular Pedido
       </button>
 
-      <div class="resultado" id="resultado"></div>
+   <div class="resultado" id="resultado"></div>
 
-    </section>
-
-  </div>
+<a
+    id="whatsappBtn"
+    target="_blank"
+    style="display:none;"
+>
+    <button>
+        <i class="fa-brands fa-whatsapp"></i>
+        Fazer Pedido
+    </button>
+</a>
 
   <script src="script.js"></script>
 
