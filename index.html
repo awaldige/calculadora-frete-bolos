@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Frete para Bolos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Delivery Pro</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Calculadora de Frete</h1>
-        <p>Calcule o valor do frete para o seu pedido de bolos caseiros.</p>
 
-        <div class="input-group">
-            <label for="distanciaKm">Distância (em km):</label>
-            <input type="number" id="distanciaKm" min="0" value="5" step="0.1">
-        </div>
+  <div class="container">
 
-        <div class="input-group">
-            <label for="pesoKg">Peso do Pedido (em kg):</label>
-            <input type="number" id="pesoKg" min="0.1" value="1.0" step="0.1">
-        </div>
+    <header>
 
-        <button id="calcularFreteBtn">Calcular Frete</button>
+      <div class="logo">
+        <i class="fa-solid fa-cake-candles"></i>
+        <h1>Cake Delivery Pro</h1>
+      </div>
 
-        <div class="resultado">
-            <h2>Valor do Frete:</h2>
-            <p><span id="valorFrete">R$ 0,00</span></p>
-            <p id="prazoEstimado"></p>
-        </div>
-    </div>
+      <p>
+        Faça seu pedido e calcule o frete instantaneamente.
+      </p>
 
-    <script src="script.js"></script>
+    </header>
+
+    <section class="card">
+
+      <div class="input-group">
+        <label>Nome</label>
+        <input type="text" id="nome">
+      </div>
+
+      <div class="input-group">
+        <label>Telefone</label>
+        <input type="text" id="telefone">
+      </div>
+
+      <div class="input-group">
+        <label>Tipo de Bolo</label>
+
+        <select id="bolo">
+          <option value="Chocolate">Chocolate</option>
+          <option value="Morango">Morango</option>
+          <option value="Prestígio">Prestígio</option>
+          <option value="Ninho">Ninho</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Peso (kg)</label>
+        <input type="number" id="peso" value="1">
+      </div>
+
+      <div class="input-group">
+        <label>Distância (km)</label>
+        <input type="number" id="distancia" value="5">
+      </div>
+
+      <button onclick="calcularFrete()">
+        <i class="fa-solid fa-truck"></i>
+        Calcular Pedido
+      </button>
+
+      <div class="resultado" id="resultado"></div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
