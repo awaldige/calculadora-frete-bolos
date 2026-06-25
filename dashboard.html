@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Cake Delivery Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: Arial;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+.container {
+    max-width:1000px;
+    margin:auto;
+}
+
+.card {
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stats {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+}
+
+.stats div {
+    background:#e91e63;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td {
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:left;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Dashboard - Cake Delivery Pro</h1>
+
+<div class="stats">
+
+    <div>
+        <h2 id="totalPedidos">0</h2>
+        <p>Pedidos</p>
+    </div>
+
+    <div>
+        <h2 id="totalFaturamento">R$ 0</h2>
+        <p>Faturamento</p>
+    </div>
+
+    <div>
+        <h2 id="ticketMedio">R$ 0</h2>
+        <p>Ticket Médio</p>
+    </div>
+
+</div>
+
+<div class="card">
+    <h3>📦 Últimos Pedidos</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Bolo</th>
+                <th>Total</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+
+        <tbody id="listaPedidos"></tbody>
+    </table>
+</div>
+
+</div>
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+</html>
