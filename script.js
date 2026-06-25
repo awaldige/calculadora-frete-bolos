@@ -1,4 +1,4 @@
-```javascript
+javascript
 function calcularFrete() {
 
     const nome = document.getElementById("nome").value.trim();
@@ -122,4 +122,4 @@ Gostaria de fazer um pedido.
 
     whatsappBtn.style.display = "block";
 }
-```
+
