@@ -59,8 +59,6 @@ Como a aplicação foi construída em Vanilla Architecture (JavaScript Puro), ne
 
 📸 Demonstração da Interface
 Fluxo Principal de Pedidos
-<img width="1351" height="639" alt="image" src="https://github.com/user-attachments/assets/ddf1260d-7c4c-4741-96ca-921eda57d99c" />
-<img width="1351" height="639" alt="image" src="https://github.com/user-attachments/assets/0651597a-3f7c-4281-bcf7-fcabf9e668a6" />
 
 
 
