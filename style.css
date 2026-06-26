@@ -19,7 +19,6 @@ body {
     max-width: 600px;
 }
 
-/* Header & Logo */
 header {
     text-align: center;
     color: white;
@@ -43,7 +42,6 @@ header p {
     opacity: 0.9;
 }
 
-/* Card Principal (Formulário) */
 .card {
     background: white;
     padding: 30px;
@@ -63,7 +61,6 @@ label {
     font-size: 14px;
 }
 
-/* Campos de Entrada uniformizados */
 input,
 select,
 textarea {
@@ -81,7 +78,6 @@ textarea {
     resize: vertical;
 }
 
-/* Efeito de foco nos inputs */
 input:focus,
 select:focus,
 textarea:focus {
@@ -90,34 +86,97 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
 }
 
-/* Botão de Envio / Calcular */
-button[type="submit"] {
-    width: 100%;
+/* Nova Seção de Layout dos Bolos */
+.secao-bolos {
+    background: #fff5f7;
     padding: 15px;
-    border: none;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    border: 1px dashed #ff758c;
+}
+
+.secao-bolos h3 {
+    font-size: 16px;
+    color: #d81b60;
+    margin-bottom: 12px;
+}
+
+.grid-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Botão Secundário (Adicionar) */
+.btn-secundario {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e91e63;
     border-radius: 10px;
-    background: #e91e63;
-    color: white;
-    font-size: 18px;
+    background: transparent;
+    color: #e91e63;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    gap: 8px;
+    transition: all 0.2s ease;
 }
 
-button[type="submit"]:hover {
-    background: #d81b60;
-    transform: translateY(-2px);
+.btn-secundario:hover {
+    background: #e91e63;
+    color: white;
 }
 
-button[type="submit"]:active {
-    transform: translateY(0);
+/* Lista do Carrinho Visual */
+.lista-carrinho {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 18px;
 }
 
-/* Bloco de Resultados Reativos */
+.lista-carrinho h4 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.lista-carrinho ul {
+    list-style: none;
+}
+
+.lista-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed #eee;
+    color: #444;
+}
+
+.lista-carrinho li:last-child {
+    border-bottom: none;
+}
+
+.btn-remover {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 5px;
+}
+
+.btn-remover:hover {
+    color: #c0392b;
+}
+
+/* Bloco de Resultados */
 .resultado {
     margin-top: 25px;
 }
@@ -150,7 +209,7 @@ button[type="submit"]:active {
     margin: 15px 0;
 }
 
-/* Botão do WhatsApp Estilizado diretamente do link */
+/* Botão do WhatsApp */
 .btn-whatsapp {
     display: flex;
     justify-content: center;
