@@ -58,7 +58,8 @@ cd Cake-Delivery-Pro
 Como a aplicação foi construída em Vanilla Architecture (JavaScript Puro), nenhuma instalação de pacotes ou inicialização de servidores adicionais é requerida. Basta abrir o arquivo index.html em qualquer navegador moderno.
 
 📸 Demonstração da Interface
-Fluxo Principal de Pedidos
+
+
 
 
 
