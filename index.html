@@ -45,44 +45,52 @@
             </div>
 
             <div class="input-group">
-                <label for="observacoes">Observações</label>
-                <textarea id="observacoes" rows="3" placeholder="Ex: sem açúcar, entrega urgente, escrever 'Parabéns' no bolo..."></textarea>
+                <label for="observacoes">Observações Gerais</label>
+                <textarea id="observacoes" rows="3" placeholder="Ex: Entrega urgente, portaria liberada..."></textarea>
             </div>
 
-           <div class="input-group">
-    <label for="bolo">Tipo de Bolo</label>
-    <select id="bolo" required>
-        <option value="Chocolate" data-preco="50">Chocolate - R$ 50,00</option>
-        <option value="Morango" data-preco="60">Morango - R$ 60,00</option>
-        <option value="Prestigio" data-preco="70">Prestígio - R$ 70,00</option>
-        <option value="Ninho" data-preco="80">Ninho - R$ 80,00</option>
-        
-        <option value="Red Velvet" data-preco="85">Red Velvet - R$ 85,00</option>
-        <option value="Doce de Leite" data-preco="65">Doce de Leite - R$ 65,00</option>
-        <option value="Cenoura com Brigadeiro" data-preco="55">Cenoura com Brigadeiro - R$ 55,00</option>
-        <option value="Abacaxi com Coco" data-preco="65">Abacaxi com Coco - R$ 65,00</option>
-        <option value="Maracujá" data-preco="60">Maracujá - R$ 60,00</option>
+            <div class="secao-bolos">
+                <h3>🎂 Monte seu Pedido</h3>
+                
+                <div class="input-group">
+                    <label for="bolo">Sabor do Bolo</label>
+                    <select id="bolo">
+                        <option value="Chocolate" data-preco="50">Chocolate - R$ 50,00</option>
+                        <option value="Morango" data-preco="60">Morango - R$ 60,00</option>
+                        <option value="Prestigio" data-preco="70">Prestígio - R$ 70,00</option>
+                        <option value="Ninho" data-preco="80">Ninho - R$ 80,00</option>
+                        <option value="Red Velvet" data-preco="85">Red Velvet - R$ 85,00</option>
+                        <option value="Doce de Leite" data-preco="65">Doce de Leite - R$ 65,00</option>
+                        <option value="Cenoura com Brigadeiro" data-preco="55">Cenoura com Brigadeiro - R$ 55,00</option>
+                        <option value="Abacaxi com Coco" data-preco="65">Abacaxi com Coco - R$ 65,00</option>
+                        <option value="Maracujá" data-preco="60">Maracujá - R$ 60,00</option>
+                        <option value="Limão Siciliano" data-preco="60">Limão Siciliano - R$ 60,00</option>
+                        <option value="Nozes com Baba de Moça" data-preco="90">Nozes com Baba de Moça - R$ 90,00</option>
+                        <option value="Floresta Negra" data-preco="75">Floresta Negra - R$ 75,00</option>
+                    </select>
+                </div>
 
-        <option value="Limão Siciliano" data-preco="60">Limão Siciliano - R$ 60,00</option>
-        <option value="Nozes com Baba de Moça" data-preco="90">Nozes com Baba de Moça - R$ 90,00</option>
-        <option value="Floresta Negra" data-preco="75">Floresta Negra - R$ 75,00</option>
-    </select>
-</div>
+                <div class="grid-inputs">
+                    <div class="input-group">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" value="1" min="1" step="0.5">
+                    </div>
 
-            <div class="input-group">
-                <label for="peso">Peso (kg)</label>
-                <input type="number" id="peso" value="1" min="1" step="0.5" required>
+                    <div class="input-group">
+                        <label for="distancia">Distância (km)</label>
+                        <input type="number" id="distancia" value="5" min="0" step="0.1">
+                    </div>
+                </div>
+
+                <button type="button" id="btn-adicionar-bolo" class="btn-secundario">
+                    <i class="fa-solid fa-plus"></i> Adicionar Bolo ao Pedido
+                </button>
             </div>
 
-            <div class="input-group">
-                <label for="distancia">Distância (km)</label>
-                <input type="number" id="distancia" value="5" min="0" step="0.1" required>
+            <div id="lista-bolos-escolhidos" class="lista-carrinho" style="display: none;">
+                <h4>Bolos no Carrinho:</h4>
+                <ul id="itens-carrinho"></ul>
             </div>
-
-            <button type="submit" id="btn-calcular">
-                <i class="fa-solid fa-truck"></i>
-                Calcular Pedido
-            </button>
 
             <div class="resultado" id="resultado" style="display: none;"></div>
 
@@ -98,5 +106,4 @@
     <script type="module" src="script.js"></script>
 
 </body>
-
 </html>
