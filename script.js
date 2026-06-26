@@ -179,3 +179,19 @@ document.getElementById("form-pedido").addEventListener("submit", function (even
     event.preventDefault();
     atualizarOrcamento();
 });
+
+// Evento para limpar o pedido e resetar a tela após o envio
+document.getElementById("whatsappBtn").addEventListener("click", function () {
+    // 1. Reseta o array de bolos escolhidos
+    carrinho = [];
+
+    // 2. Reseta todos os campos do formulário para o estado inicial
+    document.getElementById("form-pedido").reset();
+
+    // 3. Força o peso a voltar para o valor padrão de 1kg
+    document.getElementById("peso").value = "1";
+
+    // 4. Atualiza os componentes visuais para esconder o carrinho e o resumo vazios
+    renderizarCarrinho();
+    atualizarOrcamento();
+});
