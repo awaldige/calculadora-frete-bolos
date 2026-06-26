@@ -1,109 +1,90 @@
-# 🍰 Calculadora de Frete — Bolos Delícia
+Markdown
+# 🎂 Cake Delivery Pro
 
-Aplicação web simples e eficiente para **cálculo automático de frete** em entregas de bolos e confeitaria artesanal.  
-O sistema calcula o valor da entrega considerando **distância** e **peso do pedido**, oferecendo uma estimativa rápida e clara para clientes e lojistas.
+Uma aplicação web moderna e reativa para **gestão de pedidos e cálculo automatizado de entregas** voltada para confeitarias e comércio de bolos artesanais. 
 
-Projeto desenvolvido para fins de **portfólio e uso prático em pequenos negócios**.
+O sistema simula a experiência de um carrinho de compras de e-commerce, permitindo a adição de múltiplos produtos no mesmo pedido, validação dinâmica de dados de entrega e geração de mensagens estruturadas integradas diretamente à API do WhatsApp.
+
+👉 **Acesse a aplicação online:** [https://cake-delivery-pro.vercel.app](https://cake-delivery-pro.vercel.app)
 
 ---
 
 ## 💡 Sobre o Projeto
 
-A calculadora foi criada para facilitar o processo de definição de custo de entrega em confeitarias e lojas caseiras, evitando cálculos manuais e erros de estimativa.
+O **Cake Delivery Pro** foi desenvolvido para solucionar gargalos logísticos e de atendimento em pequenas confeitarias. Ele elimina processos manuais ao centralizar a escolha dos produtos e automatizar as regras de negócio em uma única interface fluida e de alta conversão.
 
-O sistema combina:
-
-- Taxa fixa de entrega
-- Custo por quilômetro rodado
-- Custo por peso transportado
-
-Tudo apresentado em uma interface simples e responsiva.
+### 🧠 Regras de Negócio Implementadas:
+- **Precificação Dinâmica:** O custo base do bolo multiplica-se automaticamente de acordo com o peso fracionado (kg) inserido pelo usuário.
+- **Logística Fretada Acumulativa:** Aplicação de uma taxa base fixa de entrega com acréscimo de valor adicional por quilo excedente, calculada sobre o peso total da carga contida no carrinho.
+- **Automação de Atendimento:** Serialização de objetos do array de compras em uma string limpa e formatada para o fechamento do pedido via WhatsApp.
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades Correntes
 
-- 📏 Cálculo automático baseado em:
-  - Distância (KM)
-  - Peso do pedido (KG)
-- 💰 Exibição instantânea do valor do frete
-- ⏱️ Estimativa de prazo de entrega
-- ✅ Validação de dados para evitar valores inválidos
-- 📱 Layout responsivo (desktop e mobile)
-- ⚡ Funcionamento rápido e sem backend
+- 🛒 **Carrinho Multitestável:** Adição de múltiplos sabores de bolos e pesos do mesmo tipo em um único pedido com persistência em memória (`state-driven`).
+- 🗑️ **Manipulação Dinâmica:** Remoção de itens individualmente com recálculo instantâneo de subtotais, frete e total geral.
+- 📞 **Máscara Input Pattern:** Formatação reativa em tempo real para campos de telefone no padrão brasileiro `(XX) XXXXX-XXXX`.
+- ⚡ **UI/UX Reativa (`Zero-Click`):** Exibição do card de resumo de valores e botões de ação apenas após a validação total de dados compulsórios, limpando a tela automaticamente pós-envio.
+- 🎨 **Visual Moderno:** Layout responsivo otimizado para dispositivos móveis com foco na experiência do usuário.
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-- **HTML5** — Estrutura da aplicação
-- **CSS3** — Layout responsivo e estilo visual
-- **JavaScript (Vanilla)** — Lógica de cálculo e interações
+- **HTML5 Semantic** — Estruturação semântica da interface.
+- **CSS3 Modern** — Estilização, efeitos de transição e responsividade.
+- **JavaScript (ES6+)** — Manipulação assíncrona do DOM, gerenciamento de estados (`Array Architecture`), lógica matemática e integração com a API do WhatsApp.
+- **Font Awesome** — Arquitetura de ícones vetoriais.
 
 ---
 
-## 🚀 Como Executar Localmente
+## 📂 Estrutura do Projeto
 
-### 1. Clonar o repositório
-```bash
-git clone https://github.com/awaldige/calculadora-frete-bolos.git
-cd calculadora-frete-bolos
-2. Abrir o projeto
-Abra o arquivo abaixo em qualquer navegador:
-
-index.html
-Nenhum servidor ou instalação adicional é necessária.
-
-🌐 Versão Online
-A aplicação pode ser acessada online:
-
-🔗 https://calculadora-frete-bolos.vercel.app
-
-## 📸 Demonstração
-
-### Tela inicial
-![Tela inicial](imagens/home.png)
-
-### Resultado do cálculo
-![Resultado](imagens/resultado.png)
-
-
-📂 Estrutura do Projeto
-calculadora-frete-bolos/
+```text
+Cake-Delivery-Pro/
 │
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-🔮 Melhorias Futuras
-Possíveis evoluções do projeto:
+├── index.html        # Estrutura e marcação da aplicação
+├── style.css         # Identidade visual e regras de responsividade
+├── script.js        # Motor de lógica, carrinho e controle do DOM
+├── favicon.png       # Ícone de identificação da aba do navegador
+└── README.md         # Documentação técnica do repositório
+🚀 Como Executar Localmente
+1. Clonar o repositório
+Bash
+git clone [https://github.com/awaldige/Cake-Delivery-Pro.git](https://github.com/awaldige/Cake-Delivery-Pro.git)
+cd Cake-Delivery-Pro
+2. Inicializar o projeto
+Como a aplicação foi construída em Vanilla Architecture (JavaScript Puro), nenhuma instalação de pacotes ou inicialização de servidores adicionais é requerida. Basta abrir o arquivo index.html em qualquer navegador moderno.
 
-Integração com APIs de mapas para cálculo automático de distância
+📸 Demonstração da Interface
+Fluxo Principal de Pedidos
+<img width="1351" height="639" alt="image" src="https://github.com/user-attachments/assets/ddf1260d-7c4c-4741-96ca-921eda57d99c" />
+<img width="1351" height="639" alt="image" src="https://github.com/user-attachments/assets/0651597a-3f7c-4281-bcf7-fcabf9e668a6" />
 
-Cadastro de pedidos e clientes
 
-Histórico de entregas
 
-Área administrativa
+Fechamento e Resumo
+🔮 Roadmap / Melhorias Futuras
+[ ] Integração com banco de dados (Ex: Supabase / PostgreSQL) para persistência permanente.
 
-Versão PWA com uso offline
+[ ] Implementação de um painel administrativo (Dashboard) para controle interno de produção das receitas.
 
-Integração com sistemas de pagamento
+[ ] Integração nativa com APIs de mapas para geolocalização e cálculo por zonas de bairro.
+
+[ ] Autenticação de clientes via NextAuth / Supabase Auth.
 
 🤝 Contribuições
-Sugestões e melhorias são bem-vindas:
-
-Abra uma Issue
-
-Envie um Pull Request
-
-Compartilhe ideias para evolução do projeto
+Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request se encontrar falhas ou tiver sugestões de novas funcionalidades.
 
 📄 Licença
-Este projeto utiliza a Licença MIT, permitindo uso e adaptação livre.
+Este projeto está sob a licença MIT. Veja o arquivo para mais detalhes.
 
 👨‍💻 Autor
-Desenvolvido por André Waldige
-🔗 GitHub: https://github.com/awaldige
+Desenvolvido por André Waldige — Analista e Desenvolvedor de Sistemas.
 
-⭐ Projeto criado para estudo, prática e portfólio profissional.
+GitHub: github.com/awaldige
+
+LinkedIn: linkedin.com/in/andre-waldige-dev
+
+Projeto construído com foco na demonstração de habilidades práticas em arquitetura de dados no Front-end e UX reativo.
