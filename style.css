@@ -86,7 +86,7 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
 }
 
-/* Nova Seção de Layout dos Bolos */
+/* Seção Interna dos Bolos */
 .secao-bolos {
     background: #fff5f7;
     padding: 15px;
@@ -99,12 +99,6 @@ textarea:focus {
     font-size: 16px;
     color: #d81b60;
     margin-bottom: 12px;
-}
-
-.grid-inputs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
 }
 
 /* Botão Secundário (Adicionar) */
@@ -123,6 +117,7 @@ textarea:focus {
     align-items: center;
     gap: 8px;
     transition: all 0.2s ease;
+    margin-top: 5px;
 }
 
 .btn-secundario:hover {
@@ -130,7 +125,7 @@ textarea:focus {
     color: white;
 }
 
-/* Lista do Carrinho Visual */
+/* Lista do Carrinho */
 .lista-carrinho {
     background: #fdfdfd;
     border: 1px solid #eee;
